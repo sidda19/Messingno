@@ -3,5 +3,5 @@ Title: MISSINGNO
 Visualizing Missing Data Patterns Using Missingno in Python
 
 ---
-my swghsfvtr
+
 Quarto template Text!
