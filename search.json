@@ -23,8 +23,15 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Quarto Template",
+    "title": "MISSINGNO",
     "section": "",
-    "text": "my swghsfvtr Quarto template Text!"
+    "text": "#Title"
+  },
+  {
+    "objectID": "index.html#visualizing-missing-data-patterns-using-missingno-in-python",
+    "href": "index.html#visualizing-missing-data-patterns-using-missingno-in-python",
+    "title": "MISSINGNO",
+    "section": "Visualizing Missing Data Patterns Using Missingno in Python",
+    "text": "Visualizing Missing Data Patterns Using Missingno in Python\n\nQuarto template Text!"
   }
 ]
