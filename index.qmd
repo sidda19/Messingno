@@ -118,6 +118,8 @@ plt.show()
 print('Explanation: This matrix shows where data is missing, helping to spot patterns.')
 ```
 
+![Output](https://github.com/sidda19/Messingno/blob/master/image.png?raw=true)
+
 **2. Bridging the Gap:** 
 
 Visualizing Missing Data with Missingno in Python comparing missing values across columns using msno.bar() 
