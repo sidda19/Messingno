@@ -80,8 +80,8 @@ These are the very important characteristics that make Missingno an essential to
 
 ## Disadvantages: 
 
-*  ** Limited Complexity: ** Suitable for basic analysis; likely not suitable for large or highly complex datasets.
-*  **Lacks Advanced Statistics: ** Focuses on visualizations rather than detailed statistical analysis.  
+*  **Limited Complexity:** Suitable for basic analysis; likely not suitable for large or highly complex datasets.
+*  **Lacks Advanced Statistics:** Focuses on visualizations rather than detailed statistical analysis.  
 * Not an independent solution: Should be used alongside other Data cleaning strategies for complete analysis.  
 * Challenging for Large Datasets: Visual interpretations may become Unstructured in large datasets.
 * Basic Imputation Methods: Requires external libraries for advanced missing data handling techniques like Deep Learning-Based Imputation,Interpolation & Extrapolation.
