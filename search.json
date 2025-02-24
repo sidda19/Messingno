@@ -33,5 +33,47 @@
     "title": "MISSINGNO",
     "section": "Missing Data Visualization:",
     "text": "Missing Data Visualization:\nMissingno provides various visualization methods, such as bar charts, matrix plots, heatmaps, and dendrograms to efficiently display the distribution of missing data."
+  },
+  {
+    "objectID": "index.html#assessing-data-completeness",
+    "href": "index.html#assessing-data-completeness",
+    "title": "MISSINGNO",
+    "section": "Assessing Data Completeness:",
+    "text": "Assessing Data Completeness:\nIdentifies columns with highest missing values instantly, assisting users in making decisions on imputing, dropping, or further investigation."
+  },
+  {
+    "objectID": "index.html#correlation-heatmap",
+    "href": "index.html#correlation-heatmap",
+    "title": "MISSINGNO",
+    "section": "Correlation Heatmap:",
+    "text": "Correlation Heatmap:\n1.Displays relationships between missing values across columns. 2.A correlation value of 1 means two variables always have missing data together. 3.A value near -1 indicates one variable is missing while the other is present."
+  },
+  {
+    "objectID": "index.html#matrix-plot-for-pattern-detection",
+    "href": "index.html#matrix-plot-for-pattern-detection",
+    "title": "MISSINGNO",
+    "section": "Matrix Plot for Pattern Detection:",
+    "text": "Matrix Plot for Pattern Detection:\nThe matrix plot identifies missing values as white and present values as black and shows clusters or systematic missing values in the data."
+  },
+  {
+    "objectID": "index.html#seamless-pandas-integration",
+    "href": "index.html#seamless-pandas-integration",
+    "title": "MISSINGNO",
+    "section": "Seamless Pandas Integration:",
+    "text": "Seamless Pandas Integration:\nMissingno works directly with Pandas DataFrames, making it an easy addition to any data analysis workflow."
+  },
+  {
+    "objectID": "index.html#customization-with-matplotlib-seaborn",
+    "href": "index.html#customization-with-matplotlib-seaborn",
+    "title": "MISSINGNO",
+    "section": "Customization with Matplotlib & Seaborn:",
+    "text": "Customization with Matplotlib & Seaborn:\nBuilt on Matplotlib and Seaborn, allowing flexible styling, color customization, and advanced plot adjustments."
+  },
+  {
+    "objectID": "index.html#open-source-actively-maintained",
+    "href": "index.html#open-source-actively-maintained",
+    "title": "MISSINGNO",
+    "section": "Open-Source & Actively Maintained:",
+    "text": "Open-Source & Actively Maintained:\nA tool available for free, with continuous updates to maintain compatibility with the latest versions of Python.\nThese are the very important characteristics that make Missingno an essential tool for rapid, efficient, and easily visualizable missing data analysis."
   }
 ]
