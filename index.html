@@ -277,6 +277,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Output</figcaption>
 </figure>
 </div>
+<p><strong>Explanation:</strong></p>
+<p>This matrix shows where data is missing, helping to spot patterns.</p>
 <p><strong>2. Bridging the Gap:</strong></p>
 <p>Visualizing Missing Data with Missingno in Python comparing missing values across columns using msno.bar()</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>msno.bar(df)</span>
@@ -289,6 +291,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Output</figcaption>
 </figure>
 </div>
+<p><strong>Explanation: </strong></p>
+<p>This bar chart shows the number of non-missing values in each column.</p>
 <p><strong>3.Cracking the Code of Missing Values: </strong></p>
 <p>Unraveling the Story with Missingno. Using msno.dendrogram() to find relationships between missing values</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>msno.dendrogram(df)</span>
@@ -302,6 +306,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Output</figcaption>
 </figure>
 </div>
+<p><strong>Explanation: </strong></p>
+<p>Groups features with similar missing data patterns, helping find dependencies.</p>
 <p><strong>4. The Puzzle of Missing Data:</strong></p>
 <p>Solving the Mystery with Missingno. Using msno.heatmap() to detect missing data correlations.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>msno.heatmap(df, cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
@@ -315,6 +321,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>output</figcaption>
 </figure>
 </div>
+<p><strong>Explanation: </strong></p>
+<p>Stronger correlations mean missing values in one column often indicate missing values in another.</p>
 <p><strong>5. Lost and Found: </strong></p>
 <p>Navigating Missing Data Landscapes with Missingno. Generating synthetic missing data and analyzing it.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a larger dataset</span></span>
@@ -335,6 +343,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>output</figcaption>
 </figure>
 </div>
+<p><strong>Explanation: </strong></p>
+<p>Shows how missing values appear in large datasets.</p>
 <p><strong>6. Peering into the Unknown: </strong></p>
 <p>Revealing Insights with Missingno Visualizations. Analyzing missing values in time-series data.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating time-series data</span></span>
@@ -357,6 +367,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>output</figcaption>
 </figure>
 </div>
+<p><strong>Explanation: </strong></p>
+<p>Useful for analyzing missing data patterns over time.</p>
 <p><strong>7. Data’s Hidden Secrets:</strong></p>
 <p>Revealing Missing Values with Missingno. Handling missing values and comparing visualizations.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Original visualization</span></span>
@@ -379,6 +391,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>output</figcaption>
 </figure>
 </div>
+<p><strong>Explanation: </strong></p>
+<p>Shows how visualizations change when missing data is handled.</p>
 <p><strong>8. Visualizing the Unseen: </strong></p>
 <p>Delving into Missing Data using Missingno. Using multiple visualizations together</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">5</span>))</span>
@@ -402,6 +416,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>output</figcaption>
 </figure>
 </div>
+<p><strong>Explanation: </strong></p>
+<p>Shows how different visualizations complement each other.</p>
 <p><strong>9. A Glimpse Beyond the Numbers: </strong></p>
 <p>Understanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_real <span class="op">=</span> pd.DataFrame({</span>
@@ -421,6 +437,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>output</figcaption>
 </figure>
 </div>
+<p><strong>Explanation: </strong></p>
+<p>Represents survey or medical datasets where missing data is common.</p>
 <hr>
 </section>
 <section id="Advantages-Disadvantages" class="level1">
