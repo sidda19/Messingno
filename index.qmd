@@ -117,6 +117,7 @@ plt.show()
 
 print('Explanation: This matrix shows where data is missing, helping to spot patterns.')
 ```
+
 **Output**
 
 ![Output](https://github.com/sidda19/Messingno/blob/master/image.png?raw=true)
@@ -130,6 +131,9 @@ msno.bar(df)
 plt.show()
 print('Explanation: This bar chart shows the number of non-missing values in each column.')
 ```
+**Output:** 
+
+![Output](
 
 **3.Cracking the Code of Missing Values: ** 
 
