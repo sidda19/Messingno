@@ -75,5 +75,19 @@
     "title": "MISSINGNO",
     "section": "Open-Source & Actively Maintained:",
     "text": "Open-Source & Actively Maintained:\nA tool available for free, with continuous updates to maintain compatibility with the latest versions of Python.\nThese are the very important characteristics that make Missingno an essential tool for rapid, efficient, and easily visualizable missing data analysis."
+  },
+  {
+    "objectID": "index.html#advantages",
+    "href": "index.html#advantages",
+    "title": "MISSINGNO",
+    "section": "Advantages:",
+    "text": "Advantages:\n\nQuick Visualization: Recognizes missing data patterns immediately, which speeds up analysis\nSeamless Integration: Works efficiently with Pandas, a widely used data manipulation library.\n\nInformative Visuals: Provides multiple plots like matrix, bar, heatmap, dendrogram, for an in-depth overview.\n\nSupports Imputation Decisions: Helps in deciding whether to impute, drop, or handle missing values effectively.\n\nData Quality Insights: Identifies correlations of missing values, uncovering possible data integrity problems."
+  },
+  {
+    "objectID": "index.html#disadvantages",
+    "href": "index.html#disadvantages",
+    "title": "MISSINGNO",
+    "section": "Disadvantages:",
+    "text": "Disadvantages:\n\nLimited Complexity: Suitable for basic analysis; likely not suitable for large or highly complex datasets.\nLacks Advanced Statistics : Focuses on visualizations rather than detailed statistical analysis.\n\nNot an independent solution: Should be used alongside other Data cleaning strategies for complete analysis.\n\nChallenging for Large Datasets: Visual interpretations may become Unstructured in large datasets.\nBasic Imputation Methods: Requires external libraries for advanced missing data handling techniques like Deep Learning-Based Imputation,Interpolation & Extrapolation."
   }
 ]
