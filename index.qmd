@@ -182,6 +182,10 @@ plt.show()
 print('Explanation: Shows how missing values appear in large datasets.')
 ```
 
+**Output** 
+
+![output](https://github.com/sidda19/Messingno/blob/master/5%20code.jpg?raw=true)
+
 **6. Peering into the Unknown: **
 
 Revealing Insights with Missingno Visualizations. Analyzing missing values in time-series data.
