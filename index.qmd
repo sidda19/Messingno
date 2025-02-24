@@ -129,6 +129,7 @@ print('Explanation: This bar chart shows the number of non-missing values in eac
 ```
 
 **3.Cracking the Code of Missing Values: ** 
+
 Unraveling the Story with Missingno. Using msno.dendrogram() to find relationships between missing values
 ```py
 msno.dendrogram(df)
@@ -138,6 +139,7 @@ print('Explanation: Groups features with similar missing data patterns, helping 
 ```
 
 **4. The Puzzle of Missing Data:** 
+
 Solving the Mystery with Missingno. Using msno.heatmap() to detect missing data correlations.
 
 ```py 
@@ -148,6 +150,7 @@ print('Explanation: Stronger correlations mean missing values in one column ofte
 ```
 
 **5. Lost and Found: **
+
 Navigating Missing Data Landscapes with Missingno. Generating synthetic missing data and analyzing it.
 
 ```py
@@ -165,6 +168,7 @@ print('Explanation: Shows how missing values appear in large datasets.')
 ```
 
 **6. Peering into the Unknown: **
+
 Revealing Insights with Missingno Visualizations. Analyzing missing values in time-series data.
 
 ```py
@@ -184,6 +188,7 @@ print('Explanation: Useful for analyzing missing data patterns over time.')
 ```
 
 **7. Data's Hidden Secrets:**
+
 Revealing Missing Values with Missingno. Handling missing values and comparing visualizations.
 
 ```py
