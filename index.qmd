@@ -7,31 +7,31 @@ Visualizing Missing Data Patterns Using Missingno in Python
 ---
 
 ---
-# Introduction
+# Introduction {#Introduction}
 ---
 
 ---
-# Installation and setup 
+# Installation and Setup {#Installation-Setup}
 ---
 
 ---
-# Key features and explanation of Missingno
+# Key features and explanation of Missingno{#Keyfeatures}
 ---
 
 ---
-# Code Examples
+# Code Examples {#Code-Examples}
 ---
 
 ---
-# Advantages and Disadvantages
+# Advantages and Disadvantages {#Advantages-Disadvantages}
 ---
 
 ---
-# Users and Practical Applications
+# Users and Practical Applications {#Practical-Applications}
 ---
 
 ---
-#Conclusions
+#Conclusions {#Conclusions}
 ---
 
 
