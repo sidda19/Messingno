@@ -1,8 +1,27 @@
 ---
 title: MISSINGNO
 ---
-# Title{MISSINGNO}
+# Title {#MISSINGNO}
 
 Visualizing Missing Data Patterns Using Missingno in Python
 ---
+
+---
+title: INTRODUCTION 
+---
+
+---
+title: INSTALLATION AND SETUP 
+---
+
+---
+tilte: KEY FEATURES AND EXPLANATION OF MISSINGNO
+---
+
+---
+title: ADVANTAGES
+---
+
+---
+
 Quarto template Text!
