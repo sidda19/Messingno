@@ -19,6 +19,9 @@ By making data gaps easier to analyze,Missingno allows data scientists to make d
 ---
 
 # Installation and Setup {#Installation-Setup}
+**1.Installation**
+To install missingno, use the following command:
+
 ```py
 pip install missingno
 
