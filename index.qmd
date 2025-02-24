@@ -161,6 +161,7 @@ print('Explanation: Stronger correlations mean missing values in one column ofte
 
 **Output** 
 
+![output](https://github.com/sidda19/Messingno/blob/master/4%20code.jpg?raw=true)
 
 
 **5. Lost and Found: **
