@@ -25,13 +25,6 @@
     "href": "index.html",
     "title": "MISSINGNO",
     "section": "",
-    "text": "#Title{MISSINGNO}"
-  },
-  {
-    "objectID": "index.html#visualizing-missing-data-patterns-using-missingno-in-python",
-    "href": "index.html#visualizing-missing-data-patterns-using-missingno-in-python",
-    "title": "MISSINGNO",
-    "section": "Visualizing Missing Data Patterns Using Missingno in Python",
-    "text": "Visualizing Missing Data Patterns Using Missingno in Python\n\nQuarto template Text!"
+    "text": "Title{MISSINGNO}\nVisualizing Missing Data Patterns Using Missingno in Python\n\nQuarto template Text!"
   }
 ]
