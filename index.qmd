@@ -278,6 +278,8 @@ print('Explanation: Represents survey or medical datasets where missing data is 
 
 **Output**
 
+![output](https://github.com/sidda19/Messingno/blob/master/9%20code.jpg?raw=true)
+
 ---
 
 
