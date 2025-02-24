@@ -1,5 +1,6 @@
 ---
-Title: MISSINGNO
+#Title: MISSINGNO
+
 Visualizing Missing Data Patterns Using Missingno in Python
 
 ---
