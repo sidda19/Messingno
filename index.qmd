@@ -40,7 +40,7 @@ import matplotlib.pyplot as plt
 
 **3. To verify the installation** 
 
-``py
+```py
 import missingno as msno 
 print(msno.__version.__)
 ```
