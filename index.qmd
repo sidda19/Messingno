@@ -1,8 +1,8 @@
 ---
 title: MISSINGNO
 ---
-#Title{MISSINGNO}
+# Title{MISSINGNO}
 
-## Visualizing Missing Data Patterns Using Missingno in Python
+Visualizing Missing Data Patterns Using Missingno in Python
 ---
 Quarto template Text!
