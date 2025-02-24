@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "MISSINGNO",
     "section": "",
-    "text": "#Title"
+    "text": "#Title{MISSINGNO}"
   },
   {
     "objectID": "index.html#visualizing-missing-data-patterns-using-missingno-in-python",
