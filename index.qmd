@@ -234,6 +234,24 @@ print('Explanation: Shows how visualizations change when missing data is handled
 
 ![output](https://github.com/sidda19/Messingno/blob/master/7%20code.jpg?raw=true)
 
+**8. Visualizing the Unseen: **
+
+Delving into Missing Data using Missingno. Using multiple visualizations together
+
+```py
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+msno.bar(df, ax=axes[0])
+axes[0].set_title("Bar Chart")
+
+msno.matrix(df, ax=axes[1])
+axes[1].set_title("Matrix Chart")
+
+msno.heatmap(df, ax=axes[2], cmap="coolwarm")
+axes[2].set_title("Heatmap")
+
+plt.show()
+```
 
 ---
 
