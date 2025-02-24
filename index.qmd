@@ -90,6 +90,15 @@ These are the very important characteristics that make Missingno an essential to
 
 # Users and Practical Applications {#Practical-Applications}
 
+It provides informative visualizations that help in detection of missing data patterns, enabling data scientists to make decisions on how to deal with them. Some of the applications are:
+
+* Data Cleaning & Preprocessing: Helps detect and handle missing values before machine learning building models.
+* Exploratory Data Analysis (EDA): Detects missing data patterns through visualizations such as bar plots and heatmaps. 
+  And also states whether missing data is random or any particular pattern.
+* Detecting Data Collection Problems: Identifies defects in survey designs, sensor failures, or transmission errors.
+* Feature Engineering & Model Tunning: Assists in creating improved features and enhancing model accuracy.
+* Medical & Financial Data Analysis – Evaluates gaps in patient records, financial transactions, and time-series data.
+
 ---
 
 # Conclusion {#Conclusion}
