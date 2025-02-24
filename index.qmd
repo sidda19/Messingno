@@ -230,6 +230,10 @@ plt.show()
 print('Explanation: Shows how visualizations change when missing data is handled.')
 ```
 
+**Output** 
+
+![output](https://github.com/sidda19/Messingno/blob/master/7%20code.jpg?raw=true)
+
 
 ---
 
