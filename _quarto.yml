@@ -16,8 +16,10 @@ website:
         text: Key Features
       - href: index.qmd#Code-Examples
         text: Code Examples
-      - href: index.qmd#Practical-Explanations
-        text: Practical expalnations
+      - href: index.qmd#Advantages-Disadvantages
+        text: Advantages and Disadvantages
+      - href: index.qmd#Practical-Applications
+        text: Practical Applications
       - href: index.qmd#Conclusion
         text: Conclusion
 
