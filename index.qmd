@@ -251,9 +251,35 @@ msno.heatmap(df, ax=axes[2], cmap="coolwarm")
 axes[2].set_title("Heatmap")
 
 plt.show()
+
+print('Explanation: Shows how different visualizations complement each other.')
 ```
 
+**Output** 
+
+![output](https://github.com/sidda19/Messingno/blob/master/8%20code.jpg?raw=true)
+
+**9. A Glimpse Beyond the Numbers: ** 
+
+Understanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.
+
+```py
+df_real = pd.DataFrame({
+    "Survey_Responses": [5, np.nan, 3, 4, np.nan, 2, np.nan, 1, 4, np.nan],
+    "Medical_Records": [np.nan, np.nan, 130, 120, np.nan, np.nan, 140, 135, 125, 110]
+})
+
+msno.matrix(df_real)
+plt.show()
+
+
+print('Explanation: Represents survey or medical datasets where missing data is common.')
+```
+
+**Output**
+
 ---
+
 
 # Advantages and Disadvantages {#Advantages-Disadvantages}
 
