@@ -206,6 +206,10 @@ plt.show()
 print('Explanation: Useful for analyzing missing data patterns over time.')
 ```
 
+**Output** 
+
+![output](https://github.com/sidda19/Messingno/blob/master/6%20code.jpg?raw=true)
+
 **7. Data's Hidden Secrets:**
 
 Revealing Missing Values with Missingno. Handling missing values and comparing visualizations.
