@@ -19,13 +19,34 @@ By making data gaps easier to analyze,Missingno allows data scientists to make d
 ---
 
 # Installation and Setup {#Installation-Setup}
-**1.Installation**
+**1.Installation: **
+
 To install missingno, use the following command:
 
 ```py
 pip install missingno
 
 ```
+
+**2.Importing Required Libraries**
+
+Once installed, to import the necessary libraries we use the following command:
+
+```py
+import missingno as msno
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+**3. To verify the installation** 
+
+``py
+import missingno as msno 
+print(msno.__version.__)
+```
+
+
+
 ---
 
 # Key features and explanation of Missingno {#Keyfeatures}
