@@ -72,19 +72,20 @@ These are the very important characteristics that make Missingno an essential to
 
 ## Advantages: 
 
-* Quick Visualization: Recognizes missing data patterns immediately, which speeds up analysis
-* Seamless Integration: Works efficiently with Pandas, a widely used data manipulation library.  
-* Informative Visuals: Provides multiple plots like matrix, bar, heatmap, dendrogram, for an in-depth overview.  
-* Supports Imputation Decisions: Helps in deciding whether to impute, drop, or handle missing values effectively.  
-* Data Quality Insights: Identifies correlations of missing values, uncovering possible data integrity problems.
+* **Quick Visualization:** Recognizes missing data patterns immediately, which speeds up analysis
+* **Seamless Integration:** Works efficiently with Pandas, a widely used data manipulation library.  
+* **Informative Visuals:** Provides multiple plots like matrix, bar, heatmap, dendrogram, for an in-depth overview.  
+* **Supports Imputation Decisions:** Helps in deciding whether to impute, drop, or handle missing values effectively.  
+* **Data Quality Insights:** Identifies correlations of missing values, uncovering possible data integrity problems.
 
 ## Disadvantages: 
 
 *  **Limited Complexity:** Suitable for basic analysis; likely not suitable for large or highly complex datasets.
 *  **Lacks Advanced Statistics:** Focuses on visualizations rather than detailed statistical analysis.  
-* Not an independent solution: Should be used alongside other Data cleaning strategies for complete analysis.  
-* Challenging for Large Datasets: Visual interpretations may become Unstructured in large datasets.
-* Basic Imputation Methods: Requires external libraries for advanced missing data handling techniques like Deep Learning-Based Imputation,Interpolation & Extrapolation.
+*  **Not an independent solution:** Should be used alongside other Data cleaning strategies for complete analysis.  
+*  **Challenging for Large Datasets:** Visual interpretations may become Unstructured in large datasets.
+*  **Basic Imputation Methods:** Requires external libraries for advanced missing data handling techniques like Deep 
+   Learning-Based Imputation,Interpolation & Extrapolation.
 
 ---
 
@@ -92,12 +93,12 @@ These are the very important characteristics that make Missingno an essential to
 
 It provides informative visualizations that help in detection of missing data patterns, enabling data scientists to make decisions on how to deal with them. Some of the applications are:
 
-* Data Cleaning & Preprocessing: Helps detect and handle missing values before machine learning building models.
-* Exploratory Data Analysis (EDA): Detects missing data patterns through visualizations such as bar plots and heatmaps. 
+* **Data Cleaning & Preprocessing:** Helps detect and handle missing values before machine learning building models.
+* **Exploratory Data Analysis (EDA):** Detects missing data patterns through visualizations such as bar plots and heatmaps. 
   And also states whether missing data is random or any particular pattern.
-* Detecting Data Collection Problems: Identifies defects in survey designs, sensor failures, or transmission errors.
-* Feature Engineering & Model Tunning: Assists in creating improved features and enhancing model accuracy.
-* Medical & Financial Data Analysis – Evaluates gaps in patient records, financial transactions, and time-series data.
+* **Detecting Data Collection Problems:** Identifies defects in survey designs, sensor failures, or transmission errors.
+* **Feature Engineering & Model Tunning:** Assists in creating improved features and enhancing model accuracy.
+* **Medical & Financial Data Analysis:** Evaluates gaps in patient records, financial transactions, and time-series data.
 
 ---
 
