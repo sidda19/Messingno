@@ -122,6 +122,10 @@ print('Explanation: This matrix shows where data is missing, helping to spot pat
 
 ![Output](https://github.com/sidda19/Messingno/blob/master/image.png?raw=true)
 
+**Explanation:** 
+
+This matrix shows where data is missing, helping to spot patterns.
+
 **2. Bridging the Gap:** 
 
 Visualizing Missing Data with Missingno in Python comparing missing values across columns using msno.bar() 
@@ -135,6 +139,10 @@ print('Explanation: This bar chart shows the number of non-missing values in eac
 
 ![Output](https://github.com/sidda19/Messingno/blob/master/2%20code.jpg?raw=true)
 
+**Explanation: **
+
+This bar chart shows the number of non-missing values in each column.
+
 **3.Cracking the Code of Missing Values: ** 
 
 Unraveling the Story with Missingno. Using msno.dendrogram() to find relationships between missing values
@@ -147,6 +155,10 @@ print('Explanation: Groups features with similar missing data patterns, helping 
 **Output:** 
 
 ![Output](https://github.com/sidda19/Messingno/blob/master/3%20code.jpg?raw=true)
+
+**Explanation: ** 
+
+Groups features with similar missing data patterns, helping find dependencies.
 
 **4. The Puzzle of Missing Data:** 
 
@@ -162,6 +174,10 @@ print('Explanation: Stronger correlations mean missing values in one column ofte
 **Output** 
 
 ![output](https://github.com/sidda19/Messingno/blob/master/4%20code.jpg?raw=true)
+
+**Explanation: ** 
+
+Stronger correlations mean missing values in one column often indicate missing values in another.
 
 
 **5. Lost and Found: **
@@ -185,6 +201,10 @@ print('Explanation: Shows how missing values appear in large datasets.')
 **Output** 
 
 ![output](https://github.com/sidda19/Messingno/blob/master/5%20code.jpg?raw=true)
+
+**Explanation: ** 
+
+Shows how missing values appear in large datasets.
 
 **6. Peering into the Unknown: **
 
@@ -210,6 +230,10 @@ print('Explanation: Useful for analyzing missing data patterns over time.')
 
 ![output](https://github.com/sidda19/Messingno/blob/master/6%20code.jpg?raw=true)
 
+**Explanation: ** 
+
+Useful for analyzing missing data patterns over time.
+
 **7. Data's Hidden Secrets:**
 
 Revealing Missing Values with Missingno. Handling missing values and comparing visualizations.
@@ -233,6 +257,10 @@ print('Explanation: Shows how visualizations change when missing data is handled
 **Output** 
 
 ![output](https://github.com/sidda19/Messingno/blob/master/7%20code.jpg?raw=true)
+
+**Explanation: ** 
+
+Shows how visualizations change when missing data is handled.
 
 **8. Visualizing the Unseen: **
 
@@ -259,6 +287,10 @@ print('Explanation: Shows how different visualizations complement each other.')
 
 ![output](https://github.com/sidda19/Messingno/blob/master/8%20code.jpg?raw=true)
 
+**Explanation: **
+
+Shows how different visualizations complement each other.
+
 **9. A Glimpse Beyond the Numbers: ** 
 
 Understanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.
@@ -279,6 +311,10 @@ print('Explanation: Represents survey or medical datasets where missing data is 
 **Output**
 
 ![output](https://github.com/sidda19/Messingno/blob/master/9%20code.jpg?raw=true)
+
+**Explanation: **
+
+Represents survey or medical datasets where missing data is common.
 
 ---
 
