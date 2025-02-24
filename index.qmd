@@ -117,6 +117,92 @@ plt.show()
 
 print('Explanation: This matrix shows where data is missing, helping to spot patterns.')
 ```
+
+**2. Bridging the Gap:** 
+
+Visualizing Missing Data with Missingno in Python comparing missing values across columns using msno.bar() 
+ 
+```py 
+msno.bar(df)
+plt.show()
+print('Explanation: This bar chart shows the number of non-missing values in each column.')
+```
+
+**3.Cracking the Code of Missing Values: ** 
+Unraveling the Story with Missingno. Using msno.dendrogram() to find relationships between missing values
+```py
+msno.dendrogram(df)
+plt.show()
+ 
+print('Explanation: Groups features with similar missing data patterns, helping find dependencies.'
+```
+
+**4. The Puzzle of Missing Data:** 
+Solving the Mystery with Missingno. Using msno.heatmap() to detect missing data correlations.
+
+```py 
+msno.heatmap(df, cmap="coolwarm")
+plt.show()
+
+print('Explanation: Stronger correlations mean missing values in one column often indicate missing values in another.')
+```
+
+**5. Lost and Found: **
+Navigating Missing Data Landscapes with Missingno. Generating synthetic missing data and analyzing it.
+
+```py
+# Creating a larger dataset
+df_large = pd.DataFrame({
+    "A": np.random.choice([1, np.nan], size=100, p=[0.9, 0.1]),
+    "B": np.random.choice([2, np.nan], size=100, p=[0.8, 0.2]),
+    "C": np.random.choice([3, np.nan], size=100, p=[0.85, 0.15])
+})
+
+msno.matrix(df_large)
+plt.show()
+
+print('Explanation: Shows how missing values appear in large datasets.')
+```
+
+**6. Peering into the Unknown: **
+Revealing Insights with Missingno Visualizations. Analyzing missing values in time-series data.
+
+```py
+# Creating time-series data
+date_rng = pd.date_range(start='1/1/2023', periods=10, freq='D')
+df_time = pd.DataFrame({
+    "Date": date_rng,
+    "Value": [np.nan, 2, np.nan, 4, 5, np.nan, 7, np.nan, 9, 10]
+})
+
+df_time.set_index("Date", inplace=True)
+
+# Matrix visualization with frequency
+msno.matrix(df_time)
+plt.show()
+print('Explanation: Useful for analyzing missing data patterns over time.')
+```
+
+**7. Data's Hidden Secrets:**
+Revealing Missing Values with Missingno. Handling missing values and comparing visualizations.
+
+```py
+# Original visualization
+msno.matrix(df)
+plt.title("Before Handling Missing Data")
+plt.show()
+
+# Fill missing values
+df_filled = df.fillna(df.mean())
+
+# After handling missing data
+msno.matrix(df_filled)
+plt.title("After Filling Missing Data")
+plt.show()
+print('Explanation: Shows how visualizations change when missing data is handled.')
+```
+
+
 ---
 
 # Advantages and Disadvantages {#Advantages-Disadvantages}
