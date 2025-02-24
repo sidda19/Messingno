@@ -143,11 +143,10 @@ msno.dendrogram(df)
 plt.show()
  
 print('Explanation: Groups features with similar missing data patterns, helping find dependencies.'
-
+```
 **Output:** 
 
-
-```
+![Output](https://github.com/sidda19/Messingno/blob/master/3%20code.jpg?raw=true)
 
 **4. The Puzzle of Missing Data:** 
 
@@ -159,6 +158,10 @@ plt.show()
 
 print('Explanation: Stronger correlations mean missing values in one column often indicate missing values in another.')
 ```
+
+**Output** 
+
+
 
 **5. Lost and Found: **
 
