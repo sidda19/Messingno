@@ -19,7 +19,7 @@ By making data gaps easier to analyze,Missingno allows data scientists to make d
 ---
 
 # Installation and Setup {#Installation-Setup}
-**1.Installation: **
+**1.Installation **
 
 To install missingno, use the following command:
 
@@ -93,6 +93,30 @@ These are the very important characteristics that make Missingno an essential to
 
 # Code Examples {#Code-Examples}
 
+**1.Unveiling the Invisible:** 
+
+Exploring Missing Data Patterns with Missingno Visualizing missing data patterns using msno.matrix()
+
+```py 
+import pandas as pd
+import numpy as np
+import missingno as msno
+import matplotlib.pyplot as plt
+
+# Create sample data
+df = pd.DataFrame({
+    "A": [1, np.nan, 3, 4, 5],
+    "B": [np.nan, 2, 3, np.nan, 5],
+    "C": [1, 2, np.nan, 4, np.nan]
+})
+
+# Matrix visualization
+msno.matrix(df)
+plt.show()
+
+
+print('Explanation: This matrix shows where data is missing, helping to spot patterns.')
+```
 ---
 
 # Advantages and Disadvantages {#Advantages-Disadvantages}
