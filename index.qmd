@@ -213,7 +213,7 @@ As you observe in the last three code snippets we observe a graph on the right s
 
 * **Higher peaks → More missing data in those rows.**
   If the line has a sharp peak, that means a specific set of rows has a lot of missing values.
-* ** Lower valleys → Fewer missing values in those rows.**
+* **Lower valleys → Fewer missing values in those rows.**
    A dip or flat section in the line means that part of the dataset has fewer or no missing values.
 * **Repeating peaks → A pattern in missingness.**
   If peaks occur at regular intervals, it suggests systematic missing data (e.g., sensor failures, survey skips, or data 
@@ -236,7 +236,7 @@ plt.show()
 
 **Explanation: **
 
-This bar chart shows the number of non-missing values in each column.
+This bar chart shows the number of missing values in each column.
 
 ## 3.Cracking the Code of Missing Values: 
 
@@ -370,14 +370,14 @@ print('Explanation: Instead of treating missing data as a problem, we use it as 
 ```
 **Output** 
 
-![output](https://github.com/sidda19/Messingno/blob/master/10.png?raw=true)
+![output](https://github.com/sidda19/Messingno/blob/master/10%20code.png?raw=true)
 
 
 ## 3. Detecting Data Collection Problems:
 
 Identifies defects in survey designs, sensor failures, or transmission errors.
 
-## 4. Feature Engineering & Model Tunning:
+## 4. Feature Engineering & Model Tuning:
 
 Assists in creating improved features and enhancing model accuracy.
 
