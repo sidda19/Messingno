@@ -250,8 +250,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="Code-Examples" class="level1">
 <h1>Code Examples</h1>
-<p><strong>1.Unveiling the Invisible:</strong></p>
-<p>Exploring Missing Data Patterns with Missingno Visualizing missing data patterns using msno.matrix()</p>
+<section id="unveiling-the-invisible" class="level2">
+<h2 class="anchored" data-anchor-id="unveiling-the-invisible">1.Unveiling the Invisible:</h2>
+<p>###Example1:</p>
+<p>Helps you to visualiZe the data the missing data using msno.matrix()</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span>
@@ -266,10 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix visualization</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>msno.matrix(df)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: This matrix shows where data is missing, helping to spot patterns.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Output</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -278,64 +277,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p><strong>Explanation:</strong></p>
-<p>This matrix shows where data is missing, helping to spot patterns.</p>
-<p><strong>2. Bridging the Gap:</strong></p>
-<p>Visualizing Missing Data with Missingno in Python comparing missing values across columns using msno.bar()</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>msno.bar(df)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: This bar chart shows the number of non-missing values in each column.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Output:</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/sidda19/Messingno/blob/master/2%20code.jpg?raw=true" class="img-fluid figure-img"></p>
-<figcaption>Output</figcaption>
-</figure>
-</div>
-<p><strong>Explanation: </strong></p>
-<p>This bar chart shows the number of non-missing values in each column.</p>
-<p><strong>3.Cracking the Code of Missing Values: </strong></p>
-<p>Unraveling the Story with Missingno. Using msno.dendrogram() to find relationships between missing values</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>msno.dendrogram(df)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Groups features with similar missing data patterns, helping find dependencies.'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Output:</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/sidda19/Messingno/blob/master/3%20code.jpg?raw=true" class="img-fluid figure-img"></p>
-<figcaption>Output</figcaption>
-</figure>
-</div>
-<p><strong>Explanation: </strong></p>
-<p>Groups features with similar missing data patterns, helping find dependencies.</p>
-<p><strong>4. The Puzzle of Missing Data:</strong></p>
-<p>Solving the Mystery with Missingno. Using msno.heatmap() to detect missing data correlations.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>msno.heatmap(df, cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Stronger correlations mean missing values in one column often indicate missing values in another.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This plot visually represents the presnce of data ponts with bright white colour and indicates the absence of data with black colour.</p>
+<section id="example2" class="level3">
+<h3 class="anchored" data-anchor-id="example2">Example2:</h3>
+<p>Here, we will compare the plot’s appearance when specific data points are absent versus how it presents when all data is fully populated. This juxtaposition will provide a clearer understanding of the visual impact that missing information can have on the overall representation of the dataset</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Original visualization</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>msno.matrix(df)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Before Handling Missing Data"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing values</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>df_filled <span class="op">=</span> df.fillna(df.mean())</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># After handling missing data</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_filled)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"After Filling Missing Data"</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Output</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://github.com/sidda19/Messingno/blob/master/4%20code.jpg?raw=true" class="img-fluid figure-img"></p>
+<p><img src="https://github.com/sidda19/Messingno/blob/master/7%20code.jpg?raw=true" class="img-fluid figure-img"></p>
 <figcaption>output</figcaption>
 </figure>
 </div>
 <p><strong>Explanation: </strong></p>
-<p>Stronger correlations mean missing values in one column often indicate missing values in another.</p>
-<p><strong>5. Lost and Found: </strong></p>
+<p>It Shows how visualizations change when missing data is handled. We are addressing the absence of data by filling in the missing values using the average (mean) for each respective column.</p>
+</section>
+<section id="example3" class="level3">
+<h3 class="anchored" data-anchor-id="example3">Example3:</h3>
 <p>Navigating Missing Data Landscapes with Missingno. Generating synthetic missing data and analyzing it.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a larger dataset</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df_large <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"A"</span>: np.random.choice([<span class="dv">1</span>, np.nan], size<span class="op">=</span><span class="dv">100</span>, p<span class="op">=</span>[<span class="fl">0.9</span>, <span class="fl">0.1</span>]),</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"B"</span>: np.random.choice([<span class="dv">2</span>, np.nan], size<span class="op">=</span><span class="dv">100</span>, p<span class="op">=</span>[<span class="fl">0.8</span>, <span class="fl">0.2</span>]),</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"C"</span>: np.random.choice([<span class="dv">3</span>, np.nan], size<span class="op">=</span><span class="dv">100</span>, p<span class="op">=</span>[<span class="fl">0.85</span>, <span class="fl">0.15</span>])</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_large)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Shows how missing values appear in large datasets.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a larger dataset</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df_large <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"A"</span>: np.random.choice([<span class="dv">1</span>, np.nan], size<span class="op">=</span><span class="dv">100</span>, p<span class="op">=</span>[<span class="fl">0.9</span>, <span class="fl">0.1</span>]),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"B"</span>: np.random.choice([<span class="dv">2</span>, np.nan], size<span class="op">=</span><span class="dv">100</span>, p<span class="op">=</span>[<span class="fl">0.8</span>, <span class="fl">0.2</span>]),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"C"</span>: np.random.choice([<span class="dv">3</span>, np.nan], size<span class="op">=</span><span class="dv">100</span>, p<span class="op">=</span>[<span class="fl">0.85</span>, <span class="fl">0.15</span>])</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_large)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Output</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -345,21 +324,84 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Explanation: </strong></p>
 <p>Shows how missing values appear in large datasets.</p>
+<p>##2. Bridging the Gap:</p>
+<p>The function <code>msno.bar()</code> provides a visual representation of missing values in a specific column through an informative bar graph. This tool enables you to quickly assess the extent of missing data, making it easier to identify trends and patterns in your dataset.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>msno.bar(df)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Output:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/sidda19/Messingno/blob/master/2%20code.jpg?raw=true" class="img-fluid figure-img"></p>
+<figcaption>Output</figcaption>
+</figure>
+</div>
+<p><strong>Explanation: </strong></p>
+<p>This bar chart shows the number of non-missing values in each column.</p>
+</section>
+</section>
+<section id="cracking-the-code-of-missing-values" class="level2">
+<h2 class="anchored" data-anchor-id="cracking-the-code-of-missing-values">3.Cracking the Code of Missing Values:</h2>
+<p>Unraveling the Story with Missingno. Using msno.dendrogram() to find relationships between missing values</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>msno.dendrogram(df)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Output:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/sidda19/Messingno/blob/master/3%20code.jpg?raw=true" class="img-fluid figure-img"></p>
+<figcaption>Output</figcaption>
+</figure>
+</div>
+<p><strong>Explanation: </strong></p>
+<p>A dendrogram is a diagram that shows how similar objects are related to each other. It’s a tree-like diagram that’s often used to visualize the results of hierarchical clustering.</p>
+<ul>
+<li>A and B are linked first, they are more similar in missing value patterns.</li>
+<li>If C joins later, it means it’s less related to both A and B, but it still shares some relationship between A and B combined. You can consider a and B as a branch and c as another.</li>
+</ul>
+<p><strong>Summary:</strong></p>
+<ul>
+<li>Elements have similar missing patterns and are connected at lower linkage distance.</li>
+<li>The height of the connection (y-axis value) tells you how different two clusters are.</li>
+<li>Lower height → columns are more similar in missing values.</li>
+<li>Higher height → columns are less similar</li>
+<li>Columns with Similar Missingness Are Grouped Together</li>
+</ul>
+</section>
+<section id="the-puzzle-of-missing-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-puzzle-of-missing-data">4. The Puzzle of Missing Data:</h2>
+<p>This function msno.heatmap() helps you correlate the missing data with other columns.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>msno.heatmap(df, cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Output</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/sidda19/Messingno/blob/master/4%20code.jpg?raw=true" class="img-fluid figure-img"></p>
+<figcaption>output</figcaption>
+</figure>
+</div>
+<p><strong>Explanation: </strong></p>
+<ul>
+<li>Perfect positive correlation- Missing values in two columns always occur together.</li>
+<li>Perfect negative correlation-If one column is missing, the other is always present.</li>
+<li>No correlation-Missingness in one column does not affect the other.</li>
+<li>A lower value means two columns have very similar missingness patterns.</li>
+<li>A higher value means the columns have less similar missingness patterns.</li>
+</ul>
 <p><strong>6. Peering into the Unknown: </strong></p>
 <p>Revealing Insights with Missingno Visualizations. Analyzing missing values in time-series data.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating time-series data</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>date_rng <span class="op">=</span> pd.date_range(start<span class="op">=</span><span class="st">'1/1/2023'</span>, periods<span class="op">=</span><span class="dv">10</span>, freq<span class="op">=</span><span class="st">'D'</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df_time <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Date"</span>: date_rng,</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Value"</span>: [np.nan, <span class="dv">2</span>, np.nan, <span class="dv">4</span>, <span class="dv">5</span>, np.nan, <span class="dv">7</span>, np.nan, <span class="dv">9</span>, <span class="dv">10</span>]</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>df_time.set_index(<span class="st">"Date"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix visualization with frequency</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_time)</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Useful for analyzing missing data patterns over time.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating time-series data</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>date_rng <span class="op">=</span> pd.date_range(start<span class="op">=</span><span class="st">'1/1/2023'</span>, periods<span class="op">=</span><span class="dv">10</span>, freq<span class="op">=</span><span class="st">'D'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>df_time <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Date"</span>: date_rng,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Value"</span>: [np.nan, <span class="dv">2</span>, np.nan, <span class="dv">4</span>, <span class="dv">5</span>, np.nan, <span class="dv">7</span>, np.nan, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>df_time.set_index(<span class="st">"Date"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix visualization with frequency</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_time)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Useful for analyzing missing data patterns over time.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Output</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -369,32 +411,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Explanation: </strong></p>
 <p>Useful for analyzing missing data patterns over time.</p>
-<p><strong>7. Data’s Hidden Secrets:</strong></p>
-<p>Revealing Missing Values with Missingno. Handling missing values and comparing visualizations.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Original visualization</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>msno.matrix(df)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Before Handling Missing Data"</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing values</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>df_filled <span class="op">=</span> df.fillna(df.mean())</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># After handling missing data</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_filled)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"After Filling Missing Data"</span>)</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Shows how visualizations change when missing data is handled.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Output</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/sidda19/Messingno/blob/master/7%20code.jpg?raw=true" class="img-fluid figure-img"></p>
-<figcaption>output</figcaption>
-</figure>
-</div>
-<p><strong>Explanation: </strong></p>
-<p>Shows how visualizations change when missing data is handled.</p>
-<p><strong>8. Visualizing the Unseen: </strong></p>
-<p>Delving into Missing Data using Missingno. Using multiple visualizations together</p>
+</section>
+<section id="visualizing-the-unseen" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-the-unseen">5. Visualizing the Unseen:</h2>
+<p>In this analysis, we are integrating three distinct plots into a single comprehensive visual representation. Organizing these elements as subplots allows us to effectively examine and compare the data, highlighting patterns and relationships within a cohesive layout.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">5</span>))</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>msno.bar(df, ax<span class="op">=</span>axes[<span class="dv">0</span>])</span>
@@ -406,9 +426,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>msno.heatmap(df, ax<span class="op">=</span>axes[<span class="dv">2</span>], cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_title(<span class="st">"Heatmap"</span>)</span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Shows how different visualizations complement each other.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Output</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -418,7 +436,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Explanation: </strong></p>
 <p>Shows how different visualizations complement each other.</p>
-<p><strong>9. A Glimpse Beyond the Numbers: </strong></p>
+</section>
+<section id="a-glimpse-beyond-the-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="a-glimpse-beyond-the-numbers">9. A Glimpse Beyond the Numbers:</h2>
 <p>Understanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_real <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Survey_Responses"</span>: [<span class="dv">5</span>, np.nan, <span class="dv">3</span>, <span class="dv">4</span>, np.nan, <span class="dv">2</span>, np.nan, <span class="dv">1</span>, <span class="dv">4</span>, np.nan],</span>
@@ -439,7 +459,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Explanation: </strong></p>
 <p>Represents survey or medical datasets where missing data is common.</p>
+<p>As you observe in the last three code snippets we observe a graph on the right side. This means</p>
+<ul>
+<li><strong>Higher peaks → More missing data in those rows.</strong> If the line has a sharp peak, that means a specific set of rows has a lot of missing values.</li>
+<li>** Lower valleys → Fewer missing values in those rows.** A dip or flat section in the line means that part of the dataset has fewer or no missing values.</li>
+<li><strong>Repeating peaks → A pattern in missingness.</strong> If peaks occur at regular intervals, it suggests systematic missing data (e.g., sensor failures, survey skips, or data collection issues).</li>
+</ul>
 <hr>
+</section>
 </section>
 <section id="Advantages-Disadvantages" class="level1">
 <h1>Advantages and Disadvantages</h1>
