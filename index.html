@@ -252,8 +252,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Code Examples</h1>
 <section id="unveiling-the-invisible" class="level2">
 <h2 class="anchored" data-anchor-id="unveiling-the-invisible">1.Unveiling the Invisible:</h2>
-<p>###Example1:</p>
-<p>Helps you to visualiZe the data the missing data using msno.matrix()</p>
+<section id="example1" class="level3">
+<h3 class="anchored" data-anchor-id="example1">Example1:</h3>
+<p>Helps you to visualize the data the missing data using msno.matrix()</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span>
@@ -277,10 +278,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p><strong>Explanation:</strong></p>
-<p>This plot visually represents the presnce of data ponts with bright white colour and indicates the absence of data with black colour.</p>
+<p>This plot visually represents the presnce of data points with bright white colour and indicates the absence of data with black colour.</p>
+</section>
 <section id="example2" class="level3">
 <h3 class="anchored" data-anchor-id="example2">Example2:</h3>
-<p>Here, we will compare the plot’s appearance when specific data points are absent versus how it presents when all data is fully populated. This juxtaposition will provide a clearer understanding of the visual impact that missing information can have on the overall representation of the dataset</p>
+<p>Here, we will compare the plot’s appearance when specific data points are absent versus how it presents when all data is fully populated. This will provide a clearer understanding of the visual impact that missing information can have on the overall representation of the dataset</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Original visualization</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>msno.matrix(df)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Before Handling Missing Data"</span>)</span>
@@ -324,7 +326,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Explanation: </strong></p>
 <p>Shows how missing values appear in large datasets.</p>
-<p>##2. Bridging the Gap:</p>
+</section>
+</section>
+<section id="bridging-the-gap" class="level2">
+<h2 class="anchored" data-anchor-id="bridging-the-gap">2. Bridging the Gap:</h2>
 <p>The function <code>msno.bar()</code> provides a visual representation of missing values in a specific column through an informative bar graph. This tool enables you to quickly assess the extent of missing data, making it easier to identify trends and patterns in your dataset.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>msno.bar(df)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -337,7 +342,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Explanation: </strong></p>
 <p>This bar chart shows the number of non-missing values in each column.</p>
-</section>
 </section>
 <section id="cracking-the-code-of-missing-values" class="level2">
 <h2 class="anchored" data-anchor-id="cracking-the-code-of-missing-values">3.Cracking the Code of Missing Values:</h2>
