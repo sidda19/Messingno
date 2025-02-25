@@ -366,6 +366,9 @@ print(df)
 print(msno.heatmap(df))
 print('Explanation: Instead of treating missing data as a problem, we use it as a feature (e.g., flagging missing values).')
 ```
+**Output** 
+
+![output](https://github.com/sidda19/Messingno/blob/master/10.png?raw=true)
 
 
 ## 3. Detecting Data Collection Problems:
