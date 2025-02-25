@@ -327,12 +327,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Explanation: </strong></p>
 <p>Shows how missing values appear in large datasets.</p>
 </section>
+<section id="example4" class="level3">
+<h3 class="anchored" data-anchor-id="example4">Example4:</h3>
+<p>Analyzing missing values in time-series data.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating time-series data</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>date_rng <span class="op">=</span> pd.date_range(start<span class="op">=</span><span class="st">'1/1/2023'</span>, periods<span class="op">=</span><span class="dv">10</span>, freq<span class="op">=</span><span class="st">'D'</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df_time <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Date"</span>: date_rng,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Value"</span>: [np.nan, <span class="dv">2</span>, np.nan, <span class="dv">4</span>, <span class="dv">5</span>, np.nan, <span class="dv">7</span>, np.nan, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>df_time.set_index(<span class="st">"Date"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix visualization with frequency</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_time)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Output</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/sidda19/Messingno/blob/master/6%20code.jpg?raw=true" class="img-fluid figure-img"></p>
+<figcaption>output</figcaption>
+</figure>
+</div>
+<p><strong>Explanation: </strong></p>
+<p>Useful for analyzing missing data patterns over time.</p>
+<p>As you observe in the last three code snippets we observe a graph on the right side. This means</p>
+<ul>
+<li><strong>Higher peaks → More missing data in those rows.</strong> If the line has a sharp peak, that means a specific set of rows has a lot of missing values.</li>
+<li>** Lower valleys → Fewer missing values in those rows.** A dip or flat section in the line means that part of the dataset has fewer or no missing values.</li>
+<li><strong>Repeating peaks → A pattern in missingness.</strong> If peaks occur at regular intervals, it suggests systematic missing data (e.g., sensor failures, survey skips, or data collection issues).</li>
+</ul>
+</section>
 </section>
 <section id="bridging-the-gap" class="level2">
 <h2 class="anchored" data-anchor-id="bridging-the-gap">2. Bridging the Gap:</h2>
 <p>The function <code>msno.bar()</code> provides a visual representation of missing values in a specific column through an informative bar graph. This tool enables you to quickly assess the extent of missing data, making it easier to identify trends and patterns in your dataset.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>msno.bar(df)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>msno.bar(df)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Output:</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -346,9 +377,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="cracking-the-code-of-missing-values" class="level2">
 <h2 class="anchored" data-anchor-id="cracking-the-code-of-missing-values">3.Cracking the Code of Missing Values:</h2>
 <p>Unraveling the Story with Missingno. Using msno.dendrogram() to find relationships between missing values</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>msno.dendrogram(df)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>msno.dendrogram(df)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Output:</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -374,8 +405,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-puzzle-of-missing-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-puzzle-of-missing-data">4. The Puzzle of Missing Data:</h2>
 <p>This function msno.heatmap() helps you correlate the missing data with other columns.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>msno.heatmap(df, cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>msno.heatmap(df, cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Output</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -391,30 +422,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>A lower value means two columns have very similar missingness patterns.</li>
 <li>A higher value means the columns have less similar missingness patterns.</li>
 </ul>
-<p><strong>6. Peering into the Unknown: </strong></p>
-<p>Revealing Insights with Missingno Visualizations. Analyzing missing values in time-series data.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating time-series data</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>date_rng <span class="op">=</span> pd.date_range(start<span class="op">=</span><span class="st">'1/1/2023'</span>, periods<span class="op">=</span><span class="dv">10</span>, freq<span class="op">=</span><span class="st">'D'</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>df_time <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Date"</span>: date_rng,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Value"</span>: [np.nan, <span class="dv">2</span>, np.nan, <span class="dv">4</span>, <span class="dv">5</span>, np.nan, <span class="dv">7</span>, np.nan, <span class="dv">9</span>, <span class="dv">10</span>]</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>df_time.set_index(<span class="st">"Date"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix visualization with frequency</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_time)</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Useful for analyzing missing data patterns over time.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Output</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/sidda19/Messingno/blob/master/6%20code.jpg?raw=true" class="img-fluid figure-img"></p>
-<figcaption>output</figcaption>
-</figure>
-</div>
-<p><strong>Explanation: </strong></p>
-<p>Useful for analyzing missing data patterns over time.</p>
 </section>
 <section id="visualizing-the-unseen" class="level2">
 <h2 class="anchored" data-anchor-id="visualizing-the-unseen">5. Visualizing the Unseen:</h2>
@@ -440,35 +447,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Explanation: </strong></p>
 <p>Shows how different visualizations complement each other.</p>
-</section>
-<section id="a-glimpse-beyond-the-numbers" class="level2">
-<h2 class="anchored" data-anchor-id="a-glimpse-beyond-the-numbers">9. A Glimpse Beyond the Numbers:</h2>
-<p>Understanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_real <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Survey_Responses"</span>: [<span class="dv">5</span>, np.nan, <span class="dv">3</span>, <span class="dv">4</span>, np.nan, <span class="dv">2</span>, np.nan, <span class="dv">1</span>, <span class="dv">4</span>, np.nan],</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Medical_Records"</span>: [np.nan, np.nan, <span class="dv">130</span>, <span class="dv">120</span>, np.nan, np.nan, <span class="dv">140</span>, <span class="dv">135</span>, <span class="dv">125</span>, <span class="dv">110</span>]</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_real)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Represents survey or medical datasets where missing data is common.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Output</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/sidda19/Messingno/blob/master/9%20code.jpg?raw=true" class="img-fluid figure-img"></p>
-<figcaption>output</figcaption>
-</figure>
-</div>
-<p><strong>Explanation: </strong></p>
-<p>Represents survey or medical datasets where missing data is common.</p>
-<p>As you observe in the last three code snippets we observe a graph on the right side. This means</p>
-<ul>
-<li><strong>Higher peaks → More missing data in those rows.</strong> If the line has a sharp peak, that means a specific set of rows has a lot of missing values.</li>
-<li>** Lower valleys → Fewer missing values in those rows.** A dip or flat section in the line means that part of the dataset has fewer or no missing values.</li>
-<li><strong>Repeating peaks → A pattern in missingness.</strong> If peaks occur at regular intervals, it suggests systematic missing data (e.g., sensor failures, survey skips, or data collection issues).</li>
-</ul>
 <hr>
 </section>
 </section>
@@ -504,14 +482,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="Practical-Applications" class="level1">
 <h1>Users and Practical Applications</h1>
 <p>It provides informative visualizations that help in detection of missing data patterns, enabling data scientists to make decisions on how to deal with them. Some of the applications are:</p>
-<ul>
-<li><strong>Data Cleaning &amp; Preprocessing:</strong> Helps detect and handle missing values before machine learning building models.</li>
-<li><strong>Exploratory Data Analysis (EDA):</strong> Detects missing data patterns through visualizations such as bar plots and heatmaps. And also states whether missing data is random or any particular pattern.</li>
-<li><strong>Detecting Data Collection Problems:</strong> Identifies defects in survey designs, sensor failures, or transmission errors.</li>
-<li><strong>Feature Engineering &amp; Model Tunning:</strong> Assists in creating improved features and enhancing model accuracy.</li>
-<li><strong>Medical &amp; Financial Data Analysis:</strong> Evaluates gaps in patient records, financial transactions, and time-series data.</li>
-</ul>
+<section id="data-cleaning-preprocessing" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning-preprocessing">1. Data Cleaning &amp; Preprocessing:</h2>
+<p>Helps detect and handle missing values before machine learning building models.</p>
+</section>
+<section id="exploratory-data-analysis-eda" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis-eda">2. Exploratory Data Analysis (EDA):</h2>
+<p>Detects missing data patterns through visualizations such as bar plots and heatmaps. And also states whether missing data is random or any particular pattern.</p>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example:</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Pratical applications <span class="op">-</span> Embracing the Gaps: Unveiling Missing Data Patterns <span class="cf">with</span> Missingno</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Using missing data <span class="im">as</span> a feature</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">df["Missing_Age"] = df["A"].isna().astype(int)</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">df["Missing_Salary"] = df["B"].isna().astype(int)</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">print(df)</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">print(msno.heatmap(df))</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co">print('Explanation: Instead of treating missing data as a problem, we use it as a feature (e.g., flagging missing values).')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="detecting-data-collection-problems" class="level2">
+<h2 class="anchored" data-anchor-id="detecting-data-collection-problems">3. Detecting Data Collection Problems:</h2>
+<p>Identifies defects in survey designs, sensor failures, or transmission errors.</p>
+</section>
+<section id="feature-engineering-model-tunning" class="level2">
+<h2 class="anchored" data-anchor-id="feature-engineering-model-tunning">4. Feature Engineering &amp; Model Tunning:</h2>
+<p>Assists in creating improved features and enhancing model accuracy.</p>
+</section>
+<section id="medical-financial-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="medical-financial-data-analysis">5. Medical &amp; Financial Data Analysis:</h2>
+<p>Evaluates gaps in patient records, financial transactions, and time-series data.</p>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example:</h3>
+<p>Understanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_real <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Survey_Responses"</span>: [<span class="dv">5</span>, np.nan, <span class="dv">3</span>, <span class="dv">4</span>, np.nan, <span class="dv">2</span>, np.nan, <span class="dv">1</span>, <span class="dv">4</span>, np.nan],</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Medical_Records"</span>: [np.nan, np.nan, <span class="dv">130</span>, <span class="dv">120</span>, np.nan, np.nan, <span class="dv">140</span>, <span class="dv">135</span>, <span class="dv">125</span>, <span class="dv">110</span>]</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>msno.matrix(df_real)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Explanation: Represents survey or medical datasets where missing data is common.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Output</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/sidda19/Messingno/blob/master/9%20code.jpg?raw=true" class="img-fluid figure-img"></p>
+<figcaption>output</figcaption>
+</figure>
+</div>
+<p><strong>Explanation: </strong></p>
+<p>Represents survey or medical datasets where missing data is common.</p>
 <hr>
+</section>
+</section>
 </section>
 <section id="Conclusion" class="level1">
 <h1>Conclusion</h1>

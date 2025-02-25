@@ -81,7 +81,7 @@
     "href": "index.html#unveiling-the-invisible",
     "title": "MISSINGNO",
     "section": "1.Unveiling the Invisible:",
-    "text": "1.Unveiling the Invisible:\n\nExample1:\nHelps you to visualize the data the missing data using msno.matrix()\nimport pandas as pd\nimport numpy as np\nimport missingno as msno\nimport matplotlib.pyplot as plt\n\n# Create sample data\ndf = pd.DataFrame({\n    \"A\": [1, np.nan, 3, 4, 5],\n    \"B\": [np.nan, 2, 3, np.nan, 5],\n    \"C\": [1, 2, np.nan, 4, np.nan]\n})\n\n# Matrix visualization\nmsno.matrix(df)\nplt.show()\nOutput\n\n\n\nOutput\n\n\nExplanation:\nThis plot visually represents the presnce of data points with bright white colour and indicates the absence of data with black colour.\n\n\nExample2:\nHere, we will compare the plot’s appearance when specific data points are absent versus how it presents when all data is fully populated. This will provide a clearer understanding of the visual impact that missing information can have on the overall representation of the dataset\n# Original visualization\nmsno.matrix(df)\nplt.title(\"Before Handling Missing Data\")\nplt.show()\n\n# Fill missing values\ndf_filled = df.fillna(df.mean())\n\n# After handling missing data\nmsno.matrix(df_filled)\nplt.title(\"After Filling Missing Data\")\nplt.show()\nOutput\n\n\n\noutput\n\n\nExplanation: \nIt Shows how visualizations change when missing data is handled. We are addressing the absence of data by filling in the missing values using the average (mean) for each respective column.\n\n\nExample3:\nNavigating Missing Data Landscapes with Missingno. Generating synthetic missing data and analyzing it.\n# Creating a larger dataset\ndf_large = pd.DataFrame({\n    \"A\": np.random.choice([1, np.nan], size=100, p=[0.9, 0.1]),\n    \"B\": np.random.choice([2, np.nan], size=100, p=[0.8, 0.2]),\n    \"C\": np.random.choice([3, np.nan], size=100, p=[0.85, 0.15])\n})\n\nmsno.matrix(df_large)\nplt.show()\nOutput\n\n\n\noutput\n\n\nExplanation: \nShows how missing values appear in large datasets."
+    "text": "1.Unveiling the Invisible:\n\nExample1:\nHelps you to visualize the data the missing data using msno.matrix()\nimport pandas as pd\nimport numpy as np\nimport missingno as msno\nimport matplotlib.pyplot as plt\n\n# Create sample data\ndf = pd.DataFrame({\n    \"A\": [1, np.nan, 3, 4, 5],\n    \"B\": [np.nan, 2, 3, np.nan, 5],\n    \"C\": [1, 2, np.nan, 4, np.nan]\n})\n\n# Matrix visualization\nmsno.matrix(df)\nplt.show()\nOutput\n\n\n\nOutput\n\n\nExplanation:\nThis plot visually represents the presnce of data points with bright white colour and indicates the absence of data with black colour.\n\n\nExample2:\nHere, we will compare the plot’s appearance when specific data points are absent versus how it presents when all data is fully populated. This will provide a clearer understanding of the visual impact that missing information can have on the overall representation of the dataset\n# Original visualization\nmsno.matrix(df)\nplt.title(\"Before Handling Missing Data\")\nplt.show()\n\n# Fill missing values\ndf_filled = df.fillna(df.mean())\n\n# After handling missing data\nmsno.matrix(df_filled)\nplt.title(\"After Filling Missing Data\")\nplt.show()\nOutput\n\n\n\noutput\n\n\nExplanation: \nIt Shows how visualizations change when missing data is handled. We are addressing the absence of data by filling in the missing values using the average (mean) for each respective column.\n\n\nExample3:\nNavigating Missing Data Landscapes with Missingno. Generating synthetic missing data and analyzing it.\n# Creating a larger dataset\ndf_large = pd.DataFrame({\n    \"A\": np.random.choice([1, np.nan], size=100, p=[0.9, 0.1]),\n    \"B\": np.random.choice([2, np.nan], size=100, p=[0.8, 0.2]),\n    \"C\": np.random.choice([3, np.nan], size=100, p=[0.85, 0.15])\n})\n\nmsno.matrix(df_large)\nplt.show()\nOutput\n\n\n\noutput\n\n\nExplanation: \nShows how missing values appear in large datasets.\n\n\nExample4:\nAnalyzing missing values in time-series data.\n# Creating time-series data\ndate_rng = pd.date_range(start='1/1/2023', periods=10, freq='D')\ndf_time = pd.DataFrame({\n    \"Date\": date_rng,\n    \"Value\": [np.nan, 2, np.nan, 4, 5, np.nan, 7, np.nan, 9, 10]\n})\n\ndf_time.set_index(\"Date\", inplace=True)\n\n# Matrix visualization with frequency\nmsno.matrix(df_time)\nplt.show()\nOutput\n\n\n\noutput\n\n\nExplanation: \nUseful for analyzing missing data patterns over time.\nAs you observe in the last three code snippets we observe a graph on the right side. This means\n\nHigher peaks → More missing data in those rows. If the line has a sharp peak, that means a specific set of rows has a lot of missing values.\n** Lower valleys → Fewer missing values in those rows.** A dip or flat section in the line means that part of the dataset has fewer or no missing values.\nRepeating peaks → A pattern in missingness. If peaks occur at regular intervals, it suggests systematic missing data (e.g., sensor failures, survey skips, or data collection issues)."
   },
   {
     "objectID": "index.html#bridging-the-gap",
@@ -102,7 +102,7 @@
     "href": "index.html#the-puzzle-of-missing-data",
     "title": "MISSINGNO",
     "section": "4. The Puzzle of Missing Data:",
-    "text": "4. The Puzzle of Missing Data:\nThis function msno.heatmap() helps you correlate the missing data with other columns.\nmsno.heatmap(df, cmap=\"coolwarm\")\nplt.show()\nOutput\n\n\n\noutput\n\n\nExplanation: \n\nPerfect positive correlation- Missing values in two columns always occur together.\nPerfect negative correlation-If one column is missing, the other is always present.\nNo correlation-Missingness in one column does not affect the other.\nA lower value means two columns have very similar missingness patterns.\nA higher value means the columns have less similar missingness patterns.\n\n6. Peering into the Unknown: \nRevealing Insights with Missingno Visualizations. Analyzing missing values in time-series data.\n# Creating time-series data\ndate_rng = pd.date_range(start='1/1/2023', periods=10, freq='D')\ndf_time = pd.DataFrame({\n    \"Date\": date_rng,\n    \"Value\": [np.nan, 2, np.nan, 4, 5, np.nan, 7, np.nan, 9, 10]\n})\n\ndf_time.set_index(\"Date\", inplace=True)\n\n# Matrix visualization with frequency\nmsno.matrix(df_time)\nplt.show()\nprint('Explanation: Useful for analyzing missing data patterns over time.')\nOutput\n\n\n\noutput\n\n\nExplanation: \nUseful for analyzing missing data patterns over time."
+    "text": "4. The Puzzle of Missing Data:\nThis function msno.heatmap() helps you correlate the missing data with other columns.\nmsno.heatmap(df, cmap=\"coolwarm\")\nplt.show()\nOutput\n\n\n\noutput\n\n\nExplanation: \n\nPerfect positive correlation- Missing values in two columns always occur together.\nPerfect negative correlation-If one column is missing, the other is always present.\nNo correlation-Missingness in one column does not affect the other.\nA lower value means two columns have very similar missingness patterns.\nA higher value means the columns have less similar missingness patterns."
   },
   {
     "objectID": "index.html#visualizing-the-unseen",
@@ -110,13 +110,6 @@
     "title": "MISSINGNO",
     "section": "5. Visualizing the Unseen:",
     "text": "5. Visualizing the Unseen:\nIn this analysis, we are integrating three distinct plots into a single comprehensive visual representation. Organizing these elements as subplots allows us to effectively examine and compare the data, highlighting patterns and relationships within a cohesive layout.\nfig, axes = plt.subplots(1, 3, figsize=(15, 5))\n\nmsno.bar(df, ax=axes[0])\naxes[0].set_title(\"Bar Chart\")\n\nmsno.matrix(df, ax=axes[1])\naxes[1].set_title(\"Matrix Chart\")\n\nmsno.heatmap(df, ax=axes[2], cmap=\"coolwarm\")\naxes[2].set_title(\"Heatmap\")\n\nplt.show()\nOutput\n\n\n\noutput\n\n\nExplanation: \nShows how different visualizations complement each other."
-  },
-  {
-    "objectID": "index.html#a-glimpse-beyond-the-numbers",
-    "href": "index.html#a-glimpse-beyond-the-numbers",
-    "title": "MISSINGNO",
-    "section": "9. A Glimpse Beyond the Numbers:",
-    "text": "9. A Glimpse Beyond the Numbers:\nUnderstanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.\ndf_real = pd.DataFrame({\n    \"Survey_Responses\": [5, np.nan, 3, 4, np.nan, 2, np.nan, 1, 4, np.nan],\n    \"Medical_Records\": [np.nan, np.nan, 130, 120, np.nan, np.nan, 140, 135, 125, 110]\n})\n\nmsno.matrix(df_real)\nplt.show()\n\n\nprint('Explanation: Represents survey or medical datasets where missing data is common.')\nOutput\n\n\n\noutput\n\n\nExplanation: \nRepresents survey or medical datasets where missing data is common.\nAs you observe in the last three code snippets we observe a graph on the right side. This means\n\nHigher peaks → More missing data in those rows. If the line has a sharp peak, that means a specific set of rows has a lot of missing values.\n** Lower valleys → Fewer missing values in those rows.** A dip or flat section in the line means that part of the dataset has fewer or no missing values.\nRepeating peaks → A pattern in missingness. If peaks occur at regular intervals, it suggests systematic missing data (e.g., sensor failures, survey skips, or data collection issues)."
   },
   {
     "objectID": "index.html#advantages",
@@ -131,5 +124,40 @@
     "title": "MISSINGNO",
     "section": "Disadvantages:",
     "text": "Disadvantages:\n\nLimited Complexity: Suitable for basic analysis; likely not suitable for large or highly complex datasets.\nLacks Advanced Statistics: Focuses on visualizations rather than detailed statistical analysis.\n\nNot an independent solution: Should be used alongside other Data cleaning strategies for complete analysis.\n\nChallenging for Large Datasets: Visual interpretations may become Unstructured in large datasets.\nBasic Imputation Methods: Requires external libraries for advanced missing data handling techniques like Deep Learning-Based Imputation,Interpolation & Extrapolation."
+  },
+  {
+    "objectID": "index.html#data-cleaning-preprocessing",
+    "href": "index.html#data-cleaning-preprocessing",
+    "title": "MISSINGNO",
+    "section": "1. Data Cleaning & Preprocessing:",
+    "text": "1. Data Cleaning & Preprocessing:\nHelps detect and handle missing values before machine learning building models."
+  },
+  {
+    "objectID": "index.html#exploratory-data-analysis-eda",
+    "href": "index.html#exploratory-data-analysis-eda",
+    "title": "MISSINGNO",
+    "section": "2. Exploratory Data Analysis (EDA):",
+    "text": "2. Exploratory Data Analysis (EDA):\nDetects missing data patterns through visualizations such as bar plots and heatmaps. And also states whether missing data is random or any particular pattern.\n\nExample:\nPratical applications - Embracing the Gaps: Unveiling Missing Data Patterns with Missingno\nUsing missing data as a feature\n'''\ndf[\"Missing_Age\"] = df[\"A\"].isna().astype(int)\ndf[\"Missing_Salary\"] = df[\"B\"].isna().astype(int)\n\nprint(df)\nprint(msno.heatmap(df))\nprint('Explanation: Instead of treating missing data as a problem, we use it as a feature (e.g., flagging missing values).')"
+  },
+  {
+    "objectID": "index.html#detecting-data-collection-problems",
+    "href": "index.html#detecting-data-collection-problems",
+    "title": "MISSINGNO",
+    "section": "3. Detecting Data Collection Problems:",
+    "text": "3. Detecting Data Collection Problems:\nIdentifies defects in survey designs, sensor failures, or transmission errors."
+  },
+  {
+    "objectID": "index.html#feature-engineering-model-tunning",
+    "href": "index.html#feature-engineering-model-tunning",
+    "title": "MISSINGNO",
+    "section": "4. Feature Engineering & Model Tunning:",
+    "text": "4. Feature Engineering & Model Tunning:\nAssists in creating improved features and enhancing model accuracy."
+  },
+  {
+    "objectID": "index.html#medical-financial-data-analysis",
+    "href": "index.html#medical-financial-data-analysis",
+    "title": "MISSINGNO",
+    "section": "5. Medical & Financial Data Analysis:",
+    "text": "5. Medical & Financial Data Analysis:\nEvaluates gaps in patient records, financial transactions, and time-series data.\n\nExample:\nUnderstanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.\ndf_real = pd.DataFrame({\n    \"Survey_Responses\": [5, np.nan, 3, 4, np.nan, 2, np.nan, 1, 4, np.nan],\n    \"Medical_Records\": [np.nan, np.nan, 130, 120, np.nan, np.nan, 140, 135, 125, 110]\n})\n\nmsno.matrix(df_real)\nplt.show()\n\n\nprint('Explanation: Represents survey or medical datasets where missing data is common.')\nOutput\n\n\n\noutput\n\n\nExplanation: \nRepresents survey or medical datasets where missing data is common."
   }
 ]
