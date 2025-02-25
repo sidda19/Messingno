@@ -499,6 +499,10 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy After Handling Missing Values: {accuracy:.2f}")
 ```
 
+**Output**
+
+![](https://github.com/sidda19/Messingno/blob/master/p-4,1.png?raw=true)
+
 ## 5. Medical & Financial Data Analysis: 
 
 Evaluates gaps in patient records, financial transactions, and time-series data.
