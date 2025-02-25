@@ -130,7 +130,7 @@
     "href": "index.html#data-cleaning-preprocessing",
     "title": "MISSINGNO",
     "section": "1. Data Cleaning & Preprocessing:",
-    "text": "1. Data Cleaning & Preprocessing:\nHelps detect and handle missing values before machine learning building models."
+    "text": "1. Data Cleaning & Preprocessing:\nHelps detect and handle missing values before machine learning building models.\n\nExample:\nimport pandas as pd\nimport missingno as msno\nimport numpy as np\n\n# Creating a sample dataset with missing values\ndata = {\n    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],\n    'Age': [25, np.nan, 30, 22, np.nan],\n    'Salary': [50000, 60000, np.nan, 45000, 70000],\n    'City': ['New York', 'Los Angeles', np.nan, 'Chicago', 'Houston']\n}\n\ndf = pd.DataFrame(data)\n\n# Visualizing missing values\nmsno.matrix(df)   # Shows a matrix plot of missing data\nmsno.bar(df)      # Shows a bar chart with missing data count\nmsno.heatmap(df)  # Shows correlations between missing values\n\n# Handling missing values\ndf_filled = df.fillna(df.median(numeric_only=True))  # Filling numerical NaNs with median\ndf_dropped = df.dropna()  # Dropping rows with missing values\n\n# Display the cleaned data\nprint(\"Original DataFrame:\")\nprint(df)\nprint(\"\\nAfter Filling Missing Values:\")\nprint(df_filled)\nprint(\"\\nAfter Dropping Missing Values:\")\nprint(df_dropped)"
   },
   {
     "objectID": "index.html#exploratory-data-analysis-eda",
@@ -144,14 +144,14 @@
     "href": "index.html#detecting-data-collection-problems",
     "title": "MISSINGNO",
     "section": "3. Detecting Data Collection Problems:",
-    "text": "3. Detecting Data Collection Problems:\nIdentifies defects in survey designs, sensor failures, or transmission errors."
+    "text": "3. Detecting Data Collection Problems:\nIdentifies defects in survey designs, sensor failures, or transmission errors.\n\nExample:\nimport pandas as pd\nimport missingno as msno\nimport numpy as np\n\n# Simulating a dataset with missing values due to data collection issues\ndata = {\n    'Timestamp': pd.date_range(start='2024-01-01', periods=10, freq='D'),\n    'Sensor_1': [10, 15, np.nan, 18, 20, 22, np.nan, 25, 27, np.nan],  # Sensor failures\n    'Sensor_2': [5, np.nan, 8, 9, np.nan, 11, 12, np.nan, 14, 15],      # Transmission errors\n    'Survey_Response': [1, 2, 2, np.nan, 1, 2, np.nan, np.nan, 1, 1]   # Missing survey responses\n}\n\ndf = pd.DataFrame(data)\n\n# Visualizing missing values to detect collection issues\nmsno.matrix(df)   # Identifies gaps due to missing data\nmsno.bar(df)      # Highlights missing value counts\nmsno.heatmap(df)  # Checks correlations between missing values\n\n# Checking missing data percentages\nmissing_percent = df.isnull().mean() * 100\nprint(\"Missing Data Percentage:\")\nprint(missing_percent)\n\n# Checking for patterns in missing data\nprint(\"\\nRows with missing values:\")\nprint(df[df.isnull().any(axis=1)])"
   },
   {
     "objectID": "index.html#feature-engineering-model-tuning",
     "href": "index.html#feature-engineering-model-tuning",
     "title": "MISSINGNO",
     "section": "4. Feature Engineering & Model Tuning:",
-    "text": "4. Feature Engineering & Model Tuning:\nAssists in creating improved features and enhancing model accuracy."
+    "text": "4. Feature Engineering & Model Tuning:\nAssists in creating improved features and enhancing model accuracy.\nimport pandas as pd\nimport missingno as msno\nimport numpy as np\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import accuracy_score\n\n# Creating a sample dataset with missing values\ndata = {\n    'Feature_1': [10, 20, np.nan, 30, 40, 50, np.nan, 70, 80, 90],\n    'Feature_2': [np.nan, 5, 6, 7, 8, 9, 10, np.nan, 12, 13],\n    'Feature_3': [1, 2, np.nan, 4, 5, 6, 7, 8, np.nan, 10],  # Has missing values\n    'Target': [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]  # Binary classification target\n}\n\ndf = pd.DataFrame(data)\n\n# Step 1: Visualizing missing values\nmsno.matrix(df)   # Identifies missing data structure\nmsno.bar(df)      # Shows missing value count\n\n# Step 2: Handling missing values using imputation\nimputer = SimpleImputer(strategy='median')  # Filling missing values with the median\ndf_imputed = pd.DataFrame(imputer.fit_transform(df.drop(columns=['Target'])), columns=['Feature_1', 'Feature_2', 'Feature_3'])\n\n# Step 3: Splitting dataset for model training\nX_train, X_test, y_train, y_test = train_test_split(df_imputed, df['Target'], test_size=0.2, random_state=42)\n\n# Step 4: Training a model before and after handling missing data\nmodel = RandomForestClassifier(random_state=42)\nmodel.fit(X_train, y_train)\n\n# Step 5: Evaluating model accuracy\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)\nprint(f\"Model Accuracy After Handling Missing Values: {accuracy:.2f}\")"
   },
   {
     "objectID": "index.html#medical-financial-data-analysis",
