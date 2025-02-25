@@ -95,9 +95,9 @@ These are the very important characteristics that make Missingno an essential to
 
 ## 1.Unveiling the Invisible:
 
-###Example1:
+### Example1:
 
-Helps you to visualiZe the data the missing data using msno.matrix()
+Helps you to visualize the data the missing data using msno.matrix()
 
 ```py 
 import pandas as pd
@@ -124,11 +124,11 @@ plt.show()
 
 **Explanation:** 
 
-This plot visually represents the presnce of data ponts with bright white colour and indicates the absence of data with black colour.
+This plot visually represents the presnce of data points with bright white colour and indicates the absence of data with black colour.
 
 ### Example2: 
 
-Here, we will compare the plot's appearance when specific data points are absent versus how it presents when all data is fully populated. This juxtaposition will provide a clearer understanding of the visual impact that missing information can have on the overall representation of the dataset       
+Here, we will compare the plot's appearance when specific data points are absent versus how it presents when all data is fully populated. This will provide a clearer understanding of the visual impact that missing information can have on the overall representation of the dataset       
 
 ```py
 # Original visualization
@@ -180,7 +180,7 @@ plt.show()
 Shows how missing values appear in large datasets.
 
 
-##2. Bridging the Gap:
+## 2. Bridging the Gap:
 
 The function `msno.bar()` provides a visual representation of missing values in a specific column through an informative bar graph. This tool enables you to quickly assess the extent of missing data, making it easier to identify trends and patterns in your dataset.
 
