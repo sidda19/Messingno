@@ -150,6 +150,8 @@ plt.show()
 
 ![output](https://github.com/sidda19/Messingno/blob/master/7%20code.jpg?raw=true)
 
+![output](https://github.com/sidda19/Messingno/blob/master/image%20(2).png?raw=true)
+
 **Explanation: ** 
 
 It Shows how visualizations change when missing data is handled. We are addressing the absence of data by filling in the missing values using the average (mean) for each respective column.
