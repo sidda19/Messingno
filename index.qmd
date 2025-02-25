@@ -179,6 +179,45 @@ plt.show()
 
 Shows how missing values appear in large datasets.
 
+### Example4: 
+
+ Analyzing missing values in time-series data.
+
+```py
+# Creating time-series data
+date_rng = pd.date_range(start='1/1/2023', periods=10, freq='D')
+df_time = pd.DataFrame({
+    "Date": date_rng,
+    "Value": [np.nan, 2, np.nan, 4, 5, np.nan, 7, np.nan, 9, 10]
+})
+
+df_time.set_index("Date", inplace=True)
+
+# Matrix visualization with frequency
+msno.matrix(df_time)
+plt.show()
+
+```
+
+**Output** 
+
+![output](https://github.com/sidda19/Messingno/blob/master/6%20code.jpg?raw=true)
+
+**Explanation: ** 
+
+Useful for analyzing missing data patterns over time.
+
+As you observe in the last three code snippets we observe a graph on the right side. This means
+
+* **Higher peaks → More missing data in those rows.**
+  If the line has a sharp peak, that means a specific set of rows has a lot of missing values.
+* ** Lower valleys → Fewer missing values in those rows.**
+   A dip or flat section in the line means that part of the dataset has fewer or no missing values.
+* **Repeating peaks → A pattern in missingness.**
+  If peaks occur at regular intervals, it suggests systematic missing data (e.g., sensor failures, survey skips, or data 
+  collection issues).
+
+
 
 ## 2. Bridging the Gap:
 
@@ -250,34 +289,6 @@ plt.show()
 * A lower value means two columns have very similar missingness patterns.
 * A higher value means the columns have less similar missingness patterns.
 
-**6. Peering into the Unknown: **
-
-Revealing Insights with Missingno Visualizations. Analyzing missing values in time-series data.
-
-```py
-# Creating time-series data
-date_rng = pd.date_range(start='1/1/2023', periods=10, freq='D')
-df_time = pd.DataFrame({
-    "Date": date_rng,
-    "Value": [np.nan, 2, np.nan, 4, 5, np.nan, 7, np.nan, 9, 10]
-})
-
-df_time.set_index("Date", inplace=True)
-
-# Matrix visualization with frequency
-msno.matrix(df_time)
-plt.show()
-print('Explanation: Useful for analyzing missing data patterns over time.')
-```
-
-**Output** 
-
-![output](https://github.com/sidda19/Messingno/blob/master/6%20code.jpg?raw=true)
-
-**Explanation: ** 
-
-Useful for analyzing missing data patterns over time.
-
 ## 5. Visualizing the Unseen:
 
 In this analysis, we are integrating three distinct plots into a single comprehensive visual representation. Organizing these elements as subplots allows us to effectively examine and compare the data, highlighting patterns and relationships within a cohesive layout.
@@ -305,42 +316,6 @@ plt.show()
 **Explanation: **
 
 Shows how different visualizations complement each other.
-
-## 9. A Glimpse Beyond the Numbers: 
-
-Understanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.
-
-```py
-df_real = pd.DataFrame({
-    "Survey_Responses": [5, np.nan, 3, 4, np.nan, 2, np.nan, 1, 4, np.nan],
-    "Medical_Records": [np.nan, np.nan, 130, 120, np.nan, np.nan, 140, 135, 125, 110]
-})
-
-msno.matrix(df_real)
-plt.show()
-
-
-print('Explanation: Represents survey or medical datasets where missing data is common.')
-```
-
-**Output**
-
-![output](https://github.com/sidda19/Messingno/blob/master/9%20code.jpg?raw=true)
-
-**Explanation: **
-
-Represents survey or medical datasets where missing data is common.
-
-As you observe in the last three code snippets we observe a graph on the right side. This means
-
-* **Higher peaks → More missing data in those rows.**
-  If the line has a sharp peak, that means a specific set of rows has a lot of missing values.
-* ** Lower valleys → Fewer missing values in those rows.**
-   A dip or flat section in the line means that part of the dataset has fewer or no missing values.
-* **Repeating peaks → A pattern in missingness.**
-  If peaks occur at regular intervals, it suggests systematic missing data (e.g., sensor failures, survey skips, or data 
-  collection issues).
-
 
 ---
 
@@ -370,12 +345,65 @@ As you observe in the last three code snippets we observe a graph on the right s
 
 It provides informative visualizations that help in detection of missing data patterns, enabling data scientists to make decisions on how to deal with them. Some of the applications are:
 
-* **Data Cleaning & Preprocessing:** Helps detect and handle missing values before machine learning building models.
-* **Exploratory Data Analysis (EDA):** Detects missing data patterns through visualizations such as bar plots and heatmaps. 
-  And also states whether missing data is random or any particular pattern.
-* **Detecting Data Collection Problems:** Identifies defects in survey designs, sensor failures, or transmission errors.
-* **Feature Engineering & Model Tunning:** Assists in creating improved features and enhancing model accuracy.
-* **Medical & Financial Data Analysis:** Evaluates gaps in patient records, financial transactions, and time-series data.
+## 1. Data Cleaning & Preprocessing:
+
+Helps detect and handle missing values before machine learning building models.
+
+## 2. Exploratory Data Analysis (EDA): 
+
+Detects missing data patterns through visualizations such as bar plots and heatmaps. And also states whether missing data is random or any particular pattern.
+
+### Example: 
+
+```py
+Pratical applications - Embracing the Gaps: Unveiling Missing Data Patterns with Missingno
+Using missing data as a feature
+'''
+df["Missing_Age"] = df["A"].isna().astype(int)
+df["Missing_Salary"] = df["B"].isna().astype(int)
+
+print(df)
+print(msno.heatmap(df))
+print('Explanation: Instead of treating missing data as a problem, we use it as a feature (e.g., flagging missing values).')
+```
+
+
+## 3. Detecting Data Collection Problems:
+
+Identifies defects in survey designs, sensor failures, or transmission errors.
+
+## 4. Feature Engineering & Model Tunning:
+
+Assists in creating improved features and enhancing model accuracy.
+
+## 5. Medical & Financial Data Analysis: 
+
+Evaluates gaps in patient records, financial transactions, and time-series data.
+
+### Example:
+
+Understanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.
+
+```py
+df_real = pd.DataFrame({
+    "Survey_Responses": [5, np.nan, 3, 4, np.nan, 2, np.nan, 1, 4, np.nan],
+    "Medical_Records": [np.nan, np.nan, 130, 120, np.nan, np.nan, 140, 135, 125, 110]
+})
+
+msno.matrix(df_real)
+plt.show()
+
+
+print('Explanation: Represents survey or medical datasets where missing data is common.')
+```
+
+**Output**
+
+![output](https://github.com/sidda19/Messingno/blob/master/9%20code.jpg?raw=true)
+
+**Explanation: **
+
+Represents survey or medical datasets where missing data is common.
 
 ---
 
