@@ -449,6 +449,10 @@ print("\nRows with missing values:")
 print(df[df.isnull().any(axis=1)])
 ```
 
+**Output** 
+
+![](https://github.com/sidda19/Messingno/blob/master/p-3,1.png?raw=true)
+
 ## 4. Feature Engineering & Model Tuning:
 
 Assists in creating improved features and enhancing model accuracy.
