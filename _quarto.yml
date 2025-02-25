@@ -22,6 +22,8 @@ website:
         text: Practical Applications
       - href: index.qmd#Conclusion
         text: Conclusion
+      - href: index.qmd#References
+        text: References
 
 format:
   html:
