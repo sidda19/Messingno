@@ -351,6 +351,41 @@ It provides informative visualizations that help in detection of missing data pa
 
 Helps detect and handle missing values before machine learning building models.
 
+### Example: 
+
+```py 
+import pandas as pd
+import missingno as msno
+import numpy as np
+
+# Creating a sample dataset with missing values
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
+    'Age': [25, np.nan, 30, 22, np.nan],
+    'Salary': [50000, 60000, np.nan, 45000, 70000],
+    'City': ['New York', 'Los Angeles', np.nan, 'Chicago', 'Houston']
+}
+
+df = pd.DataFrame(data)
+
+# Visualizing missing values
+msno.matrix(df)   # Shows a matrix plot of missing data
+msno.bar(df)      # Shows a bar chart with missing data count
+msno.heatmap(df)  # Shows correlations between missing values
+
+# Handling missing values
+df_filled = df.fillna(df.median(numeric_only=True))  # Filling numerical NaNs with median
+df_dropped = df.dropna()  # Dropping rows with missing values
+
+# Display the cleaned data
+print("Original DataFrame:")
+print(df)
+print("\nAfter Filling Missing Values:")
+print(df_filled)
+print("\nAfter Dropping Missing Values:")
+print(df_dropped)
+```
+
 ## 2. Exploratory Data Analysis (EDA): 
 
 Detects missing data patterns through visualizations such as bar plots and heatmaps. And also states whether missing data is random or any particular pattern.
@@ -377,9 +412,81 @@ print('Explanation: Instead of treating missing data as a problem, we use it as 
 
 Identifies defects in survey designs, sensor failures, or transmission errors.
 
+### Example: 
+
+```py 
+import pandas as pd
+import missingno as msno
+import numpy as np
+
+# Simulating a dataset with missing values due to data collection issues
+data = {
+    'Timestamp': pd.date_range(start='2024-01-01', periods=10, freq='D'),
+    'Sensor_1': [10, 15, np.nan, 18, 20, 22, np.nan, 25, 27, np.nan],  # Sensor failures
+    'Sensor_2': [5, np.nan, 8, 9, np.nan, 11, 12, np.nan, 14, 15],      # Transmission errors
+    'Survey_Response': [1, 2, 2, np.nan, 1, 2, np.nan, np.nan, 1, 1]   # Missing survey responses
+}
+
+df = pd.DataFrame(data)
+
+# Visualizing missing values to detect collection issues
+msno.matrix(df)   # Identifies gaps due to missing data
+msno.bar(df)      # Highlights missing value counts
+msno.heatmap(df)  # Checks correlations between missing values
+
+# Checking missing data percentages
+missing_percent = df.isnull().mean() * 100
+print("Missing Data Percentage:")
+print(missing_percent)
+
+# Checking for patterns in missing data
+print("\nRows with missing values:")
+print(df[df.isnull().any(axis=1)])
+```
+
 ## 4. Feature Engineering & Model Tuning:
 
 Assists in creating improved features and enhancing model accuracy.
+
+```py
+import pandas as pd
+import missingno as msno
+import numpy as np
+from sklearn.impute import SimpleImputer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Creating a sample dataset with missing values
+data = {
+    'Feature_1': [10, 20, np.nan, 30, 40, 50, np.nan, 70, 80, 90],
+    'Feature_2': [np.nan, 5, 6, 7, 8, 9, 10, np.nan, 12, 13],
+    'Feature_3': [1, 2, np.nan, 4, 5, 6, 7, 8, np.nan, 10],  # Has missing values
+    'Target': [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]  # Binary classification target
+}
+
+df = pd.DataFrame(data)
+
+# Step 1: Visualizing missing values
+msno.matrix(df)   # Identifies missing data structure
+msno.bar(df)      # Shows missing value count
+
+# Step 2: Handling missing values using imputation
+imputer = SimpleImputer(strategy='median')  # Filling missing values with the median
+df_imputed = pd.DataFrame(imputer.fit_transform(df.drop(columns=['Target'])), columns=['Feature_1', 'Feature_2', 'Feature_3'])
+
+# Step 3: Splitting dataset for model training
+X_train, X_test, y_train, y_test = train_test_split(df_imputed, df['Target'], test_size=0.2, random_state=42)
+
+# Step 4: Training a model before and after handling missing data
+model = RandomForestClassifier(random_state=42)
+model.fit(X_train, y_train)
+
+# Step 5: Evaluating model accuracy
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Model Accuracy After Handling Missing Values: {accuracy:.2f}")
+```
 
 ## 5. Medical & Financial Data Analysis: 
 
