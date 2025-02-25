@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Quarto Blog",
     "section": "",
-    "text": "Welcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nSimple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
+    "text": "Simple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome.html",
@@ -12,6 +12,13 @@
     "title": "Welcome",
     "section": "",
     "text": "Welcome\nHello world, this is my first blog post.\nI can write in markdown\nprint(\"Hello World\")\nI can also write math equations:\n\\[\ny = x^2\n\\]\nI can create lists easily:\n\nOne\nTwo\n\nI can also create numbered lists:\n\nOne\nTwo\n\nOr, create a table:\n\n\n\nName\nAge\n\n\n\n\nAlice\n20\n\n\nBob\n21"
+  },
+  {
+    "objectID": "posts/visualisation.html",
+    "href": "posts/visualisation.html",
+    "title": "Simple Visualisation",
+    "section": "",
+    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   },
   {
     "objectID": "index.html",
@@ -130,7 +137,7 @@
     "href": "index.html#exploratory-data-analysis-eda",
     "title": "MISSINGNO",
     "section": "2. Exploratory Data Analysis (EDA):",
-    "text": "2. Exploratory Data Analysis (EDA):\nDetects missing data patterns through visualizations such as bar plots and heatmaps. And also states whether missing data is random or any particular pattern.\n\nExample:\nPratical applications - Embracing the Gaps: Unveiling Missing Data Patterns with Missingno\nUsing missing data as a feature\n'''\ndf[\"Missing_Age\"] = df[\"A\"].isna().astype(int)\ndf[\"Missing_Salary\"] = df[\"B\"].isna().astype(int)\n\nprint(df)\nprint(msno.heatmap(df))\nprint('Explanation: Instead of treating missing data as a problem, we use it as a feature (e.g., flagging missing values).')"
+    "text": "2. Exploratory Data Analysis (EDA):\nDetects missing data patterns through visualizations such as bar plots and heatmaps. And also states whether missing data is random or any particular pattern.\n\nExample:\nPratical applications - Embracing the Gaps: Unveiling Missing Data Patterns with Missingno\nUsing missing data as a feature\n'''\ndf[\"Missing_Age\"] = df[\"A\"].isna().astype(int)\ndf[\"Missing_Salary\"] = df[\"B\"].isna().astype(int)\n\nprint(df)\nprint(msno.heatmap(df))\nprint('Explanation: Instead of treating missing data as a problem, we use it as a feature (e.g., flagging missing values).')\nOutput\n\n\n\noutput"
   },
   {
     "objectID": "index.html#detecting-data-collection-problems",
@@ -152,12 +159,5 @@
     "title": "MISSINGNO",
     "section": "5. Medical & Financial Data Analysis:",
     "text": "5. Medical & Financial Data Analysis:\nEvaluates gaps in patient records, financial transactions, and time-series data.\n\nExample:\nUnderstanding Missing Data with Missingno. Demonstrating real-world missing data scenarios.\ndf_real = pd.DataFrame({\n    \"Survey_Responses\": [5, np.nan, 3, 4, np.nan, 2, np.nan, 1, 4, np.nan],\n    \"Medical_Records\": [np.nan, np.nan, 130, 120, np.nan, np.nan, 140, 135, 125, 110]\n})\n\nmsno.matrix(df_real)\nplt.show()\n\n\nprint('Explanation: Represents survey or medical datasets where missing data is common.')\nOutput\n\n\n\noutput\n\n\nExplanation: \nRepresents survey or medical datasets where missing data is common."
-  },
-  {
-    "objectID": "posts/visualisation.html",
-    "href": "posts/visualisation.html",
-    "title": "Simple Visualisation",
-    "section": "",
-    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   }
 ]
