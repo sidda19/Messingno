@@ -386,6 +386,9 @@ print("\nAfter Dropping Missing Values:")
 print(df_dropped)
 ```
 
+**Output** 
+![output](https://github.com/sidda19/Messingno/blob/master/p-1,1.png?raw=true)
+
 ## 2. Exploratory Data Analysis (EDA): 
 
 Detects missing data patterns through visualizations such as bar plots and heatmaps. And also states whether missing data is random or any particular pattern.
